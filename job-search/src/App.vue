@@ -1,9 +1,3 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div class="wrapper">
-    <HelloWorld msg="You did it!!" />
-  </div>
+  <h1 class="header">Hello, I am in App...</h1>
 </template>
