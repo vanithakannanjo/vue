@@ -1,3 +1,12 @@
 <template>
-  <h1 class="header">Hello, I am in App...</h1>
+  <MainNav></MainNav>
 </template>
+<script>
+import MainNav from '@/components/MainNav.vue'
+export default {
+  name: 'App',
+  components: {
+    MainNav
+  }
+}
+</script>
