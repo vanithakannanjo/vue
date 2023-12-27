@@ -1,6 +1,4 @@
-<template>
-  <MainNav></MainNav>
-</template>
+<template><main-nav /></template>
 <script>
 import MainNav from '@/components/MainNav.vue'
 export default {
