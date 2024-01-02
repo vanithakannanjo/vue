@@ -11,19 +11,35 @@
             </li>
           </ul>
         </nav>
+        <div class="ml-auto flex h-full items-center">
+          <ProfileImage v-if="isLoggedIn" />
+          <ActionButton v-else @click="loginUser" />
+        </div>
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import ActionButton from '@/components/ActionButton.vue'
+import ProfileImage from '@/components/ProfileImage.vue'
 export default {
   name: 'MainNav',
+  components: {
+    ActionButton,
+    ProfileImage
+  },
   data() {
     return {
       company: 'BooBoo Car',
       url: 'https://careers.google.com',
-      menuItems: ['Teams', 'Locations', 'Life at Bobo Corp', 'How we hire', 'Jobs']
+      menuItems: ['Teams', 'Locations', 'Life at Bobo Corp', 'How we hire', 'Jobs'],
+      isLoggedIn: false
+    }
+  },
+  methods: {
+    loginUser() {
+      this.isLoggedIn = true
     }
   }
 }

@@ -20,4 +20,13 @@ describe('MainNav', () => {
 
     expect(navMenuText).toEqual(['Teams', 'Locations', 'Life at Bobo Corp', 'How we hire', 'Jobs'])
   })
+
+  it('displays user profile pic', () => {
+    render(MainNav)
+
+    const profileImage = screen.queryByRole('img', {
+      name: /User profile image/i
+    })
+    expect(profileImage).not.toBeInTheDocument()
+  })
 })
